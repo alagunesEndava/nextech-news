@@ -1,0 +1,16 @@
+version: '3.4'
+
+services:
+  nextech.news.api:
+    image: ${DOCKER_REGISTRY-}nextechnewsapi
+    build:
+      context: .
+      dockerfile: src/nextech-news.API/Dockerfile
+    depends_on:
+      - redis
+    ports:
+      - "5001:5001"
+  redis:
+    image: redis
+    ports:
+        - "6379:6379"

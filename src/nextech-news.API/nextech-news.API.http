@@ -1,0 +1,6 @@
+@nextech_news.API_HostAddress = http://localhost:5157
+
+GET {{nextech_news.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
